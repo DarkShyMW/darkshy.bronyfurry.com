@@ -29,3 +29,26 @@ body {
 .shy {
     color: red;
 }
+
+div.imagecenter { 
+  margin: 0 auto;
+  width: 80em;
+}
+img.center {
+  display: block;
+   margin-left: auto;
+   margin-right: auto;
+ }
+.responsive {
+  width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+p.outline {
+  --bd-example-padding: 1rem;
+  position: relative;
+  padding: var(--bd-example-padding);
+  margin: 0 -1.5rem;
+  border: solid var(--bs-border-color);
+  border-width: 1px 0;
+}
