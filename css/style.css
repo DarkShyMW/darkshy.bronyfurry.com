@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(58, 58, 58);
+    color: chartreuse;
+    font-family: monospace;
+}
+
+.header {
+    text-align: center;
+}
+
+#blink {
+    -webkit-animation: blink 1.5s linear infinite;
+    animation: blink 1.5s linear infinite;
+  }
+  @-webkit-keyframes blink {
+    50% { color: rgb(34, 34, 34); }
+    51% { color: rgba(34, 34, 34, 0); }
+    100% { color: rgba(34, 34, 34, 0); }
+  }
+  @keyframes blink {
+    50% { color: rgb(34, 34, 34); }
+    51% { color: rgba(34, 34, 34, 0); }
+    100% { color: rgba(34, 34, 34, 0); }
+  }
+
+.dark {
+    color:rgb(0, 0, 0);
+}
+.shy {
+    color: red;
+}
