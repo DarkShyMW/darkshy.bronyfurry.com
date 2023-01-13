@@ -28,8 +28,14 @@
         </div>
     </body>
     <script>
-        if (typeof navigator.serviceWorker !== 'undefined') {
-          navigator.serviceWorker.register('/js/pwabuilder-sw.js')
-        }
+        if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('https://dakrshy.bronyfurry.com/js/pwabuilder-sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
       </script>
 </html>
