@@ -33,3 +33,7 @@ self.addEventListener('fetch', (event) => {
         if (preloadResp) {
           return preloadResp;
         }
+      }
+    }
+  }
+}
