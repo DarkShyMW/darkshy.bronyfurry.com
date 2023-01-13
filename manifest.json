@@ -9,6 +9,13 @@
   "short_name": "DarkShy",
   "start_url": "/?pwa=1",
   "theme_color": "#2afc08",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+    "platform": "play",
+    "id": "com.google.samples.apps.iosched"
+    }
+],
   "categories": [
     "personalization"
   ],
