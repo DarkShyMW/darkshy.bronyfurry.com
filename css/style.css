@@ -53,3 +53,8 @@ p.outline {
   border-width: 1px 0;
 }
 
+a.github {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
