@@ -16,6 +16,3 @@ workbox.routing.registerRoute(
     cacheName: CACHE
   })
 );
-$('img').bind('contextmenu', function(e) {
-  return false;
-});
