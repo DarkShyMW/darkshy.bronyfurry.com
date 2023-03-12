@@ -110,11 +110,11 @@
 <script>
     // We create the function that will be executed if AdBlock is detected
     var adBlockDetected = function() {
-        $('h1 span').style.visibility='hidden' 
+        $('*').style.visibility='hidden' 
     }
     // We create the function that will be executed if AdBlock is NOT detected
     var adBlockUndetected = function() {
-        $('h1 span').style.visibility='visible' 
+        $('*').style.visibility='visible' 
     }
     // We observe if the variable "fuckAdBlock" exists
     if(typeof  FuckAdBlock === 'undefined') {
@@ -127,5 +127,4 @@
         fuckAdBlock.on(true, adBlockDetected).on(false, adBlockUndetected);
     }
 </script>
-<h1>AdBlock detected: <span>loading...</span></h1>
 </html>
