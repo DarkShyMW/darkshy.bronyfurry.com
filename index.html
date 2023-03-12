@@ -105,56 +105,26 @@
 <!-- AD BLOCK NEED FOR WE CAN WORKS -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
-<script>var fuckAdBlock = false, FuckAdBlock = undefined;</script>
+<script>var fuckAdBlock = undefined;</script>
 <script src="./js/fuckbad.js"></script>
 <script>
+    // We create the function that will be executed if AdBlock is detected
     var adBlockDetected = function() {
-        $('h1 span').text('yes');
+        $('h1 span').style.visibility='hidden' 
     }
+    // We create the function that will be executed if AdBlock is NOT detected
     var adBlockUndetected = function() {
-        $('h1 span').text('no');
+        $('h1 span').style.visibility='visible' 
     }
-    
-    if(typeof FuckAdBlock === 'undefined') {
+    // We observe if the variable "fuckAdBlock" exists
+    if(typeof  FuckAdBlock === 'undefined') {
+        // If it does not exist, it means that AdBlock blocking the script FuckAdBlock
+        // Therefore the function "adBlockDetected" is executed
+        // PS: The function is executed on the "document ready" in order to select the HTML with jQuery
         $(document).ready(adBlockDetected);
     } else {
-        var MyPluginRandom = function() {
-            FuckAdBlock.getPluginClass().apply(this, arguments);
-            this.options.set({
-                chanceDetected: 0.5,
-            });
-            
-            var data = {};
-            
-            this.start = function() {
-                var self = this;
-                data.myTimeout = setTimeout(function() {
-                    if(Math.random() <= self.options.get('chanceDetected')) {
-                        self.callDetected();
-                    } else {
-                        self.callUndetected();
-                    }
-                }, 100);
-                return this;
-            };
-            this.stop = function() {
-                clearTimeout(data.myTimeout);
-                return this;
-            };
-        };
-        MyPluginRandom.pluginName = 'random';
-        MyPluginRandom.versionMin = [4, 0, 0];
-        
-        var myFuckAdBlock = new FuckAdBlock;
-        myFuckAdBlock.registerPlugin(MyPluginRandom);
-        myFuckAdBlock.on(true, adBlockDetected).on(false, adBlockUndetected);
-        $(document).ready(function() {
-            myFuckAdBlock.check(['random'], {
-                random: {
-                    chanceDetected: 0.20,
-                },
-            });
-        });
+        // Otherwise, our functions we add to FuckAdBlock for a classic detection
+        fuckAdBlock.on(true, adBlockDetected).on(false, adBlockUndetected);
     }
 </script>
 </html>
