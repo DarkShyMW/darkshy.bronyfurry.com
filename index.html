@@ -18,7 +18,7 @@
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
         <link rel="manifest" href="manifest.json">
         <link rel="apple-touch-icon" href="/img/favicon.ico">
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css" media="print">
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
@@ -47,7 +47,7 @@
             <div class="card text-center" style="background-color: inherit; padding-top: 15px; padding-bottom: 15px; padding-left: 25px; padding-right: 25px; --bs-card-border-color: chartreuse; "><a href="https://github.com/DarkShyMW/darkshy.bronyfurry.com" class="github" rel="follow">Source code at GitHub</a></div>
         </footer>
     </body>
-    <script>
+    <script async>
        if ('serviceWorker' in navigator) {
     // Весь код регистрации у нас асинхронный.
     navigator.serviceWorker.register('./sw.js')
@@ -58,7 +58,7 @@
 }
       </script>
       <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script type="text/javascript" async >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();
     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
