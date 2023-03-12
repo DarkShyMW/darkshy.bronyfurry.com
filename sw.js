@@ -19,7 +19,8 @@ self.addEventListener('install', (event) => {
                 '/css/style.css',
                 '/img/log.webp',
                 '/css/bootstrap.min.css',
-                '/js/bootstrap.min.js'
+                '/js/bootstrap.min.js',
+                '/index.html'
             ])
         ));
 });
