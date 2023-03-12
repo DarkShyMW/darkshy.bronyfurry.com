@@ -61,6 +61,60 @@
             <div class="card text-center" style="background-color: inherit; padding-top: 15px; padding-bottom: 15px; padding-left: 25px; padding-right: 25px; --bs-card-border-color: chartreuse; "><a href="https://github.com/DarkShyMW/darkshy.bronyfurry.com" class="github" rel="follow">Source code at GitHub</a></div>
         </footer>
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">лицензии Creative Commons «Attribution-ShareAlike» («Атрибуция-СохранениеУсловий») 4.0 Всемирная</a>.
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+        <script>var fuckAdBlock = false, FuckAdBlock = undefined;</script>
+        <script src="/js/fuckbad.js"></script>
+        <script>
+            var adBlockDetected = function() {
+                $('h1 span').text('yes');
+            }
+            var adBlockUndetected = function() {
+                $('h1 span').text('no');
+            }
+            
+            if(typeof FuckAdBlock === 'undefined') {
+                $(document).ready(adBlockDetected);
+            } else {
+                var MyPluginRandom = function() {
+                    FuckAdBlock.getPluginClass().apply(this, arguments);
+                    this.options.set({
+                        chanceDetected: 0.5,
+                    });
+                    
+                    var data = {};
+                    
+                    this.start = function() {
+                        var self = this;
+                        data.myTimeout = setTimeout(function() {
+                            if(Math.random() <= self.options.get('chanceDetected')) {
+                                self.callDetected();
+                            } else {
+                                self.callUndetected();
+                            }
+                        }, 100);
+                        return this;
+                    };
+                    this.stop = function() {
+                        clearTimeout(data.myTimeout);
+                        return this;
+                    };
+                };
+                MyPluginRandom.pluginName = 'random';
+                MyPluginRandom.versionMin = [4, 0, 0];
+                
+                var myFuckAdBlock = new FuckAdBlock;
+                myFuckAdBlock.registerPlugin(MyPluginRandom);
+                myFuckAdBlock.on(true, adBlockDetected).on(false, adBlockUndetected);
+                $(document).ready(function() {
+                    myFuckAdBlock.check(['random'], {
+                        random: {
+                            chanceDetected: 0.20,
+                        },
+                    });
+                });
+            }
+            <h1>AdBlock detected: <span>loading...</span></h1>
     </body>
     <script async>
        if ('serviceWorker' in navigator) {
@@ -103,61 +157,6 @@
     })
   })</script>
 <!-- AD BLOCK NEED FOR WE CAN WORKS -->
-<img class="ad-detect" src="/img/ad.gif" />
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    
-<script>var fuckAdBlock = false, FuckAdBlock = undefined;</script>
-<script src="/js/fuckbad.js"></script>
-<script>
-    var adBlockDetected = function() {
-        $('h1 span').text('yes');
-    }
-    var adBlockUndetected = function() {
-        $('h1 span').text('no');
-    }
-    
-    if(typeof FuckAdBlock === 'undefined') {
-        $(document).ready(adBlockDetected);
-    } else {
-        var MyPluginRandom = function() {
-            FuckAdBlock.getPluginClass().apply(this, arguments);
-            this.options.set({
-                chanceDetected: 0.5,
-            });
-            
-            var data = {};
-            
-            this.start = function() {
-                var self = this;
-                data.myTimeout = setTimeout(function() {
-                    if(Math.random() <= self.options.get('chanceDetected')) {
-                        self.callDetected();
-                    } else {
-                        self.callUndetected();
-                    }
-                }, 100);
-                return this;
-            };
-            this.stop = function() {
-                clearTimeout(data.myTimeout);
-                return this;
-            };
-        };
-        MyPluginRandom.pluginName = 'random';
-        MyPluginRandom.versionMin = [4, 0, 0];
-        
-        var myFuckAdBlock = new FuckAdBlock;
-        myFuckAdBlock.registerPlugin(MyPluginRandom);
-        myFuckAdBlock.on(true, adBlockDetected).on(false, adBlockUndetected);
-        $(document).ready(function() {
-            myFuckAdBlock.check(['random'], {
-                random: {
-                    chanceDetected: 0.20,
-                },
-            });
-        });
-    }
-    <h1>AdBlock detected: <span>loading...</span></h1>
 </script>
 </html>
