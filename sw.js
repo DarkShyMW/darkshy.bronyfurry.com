@@ -16,7 +16,10 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => cache.addAll([
                 '/img/favicon.ico',
-                '/css/style.css'
+                '/css/style.css',
+                '/img/log.webp',
+                '/css/bootstrap.min.css',
+                '/js/bootstrap.min.js'
             ])
         ));
 });
