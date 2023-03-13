@@ -59,8 +59,8 @@
         <footer class="text-center" style="padding-top: 35px; padding-bottom: 15px; padding-left: 10%; padding-right: 10%;">
             <p class="card" style="background-color: inherit; padding-top: 15px; padding-bottom: 15px; padding-left: 25px; padding-right: 25px; --bs-card-border-color: chartreuse;">Все права защищены и принадлежат поням.</p>
             <div class="card text-center" style="background-color: inherit; padding-top: 15px; padding-bottom: 15px; padding-left: 25px; padding-right: 25px; --bs-card-border-color: chartreuse; "><a href="https://github.com/DarkShyMW/darkshy.bronyfurry.com" class="github" rel="follow">Source code at GitHub</a></div>
+            <a class="card text-center" style="background-color: inherit; padding-top: 15px; padding-bottom: 15px; padding-left: 25px; padding-right: 25px; --bs-card-border-color: chartreuse; " rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">лицензии Creative Commons «Attribution-ShareAlike» («Атрибуция-СохранениеУсловий») 4.0 Всемирная</a>.
         </footer>
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Это произведение доступно по <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">лицензии Creative Commons «Attribution-ShareAlike» («Атрибуция-СохранениеУсловий») 4.0 Всемирная</a>.
     </body>
     <script async>
        if ('serviceWorker' in navigator) {
@@ -103,28 +103,4 @@
     })
   })</script>
 <!-- AD BLOCK NEED FOR WE CAN WORKS -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    
-<script>var fuckAdBlock = undefined;</script>
-<script src="./js/fuckbad.js"></script>
-<script>
-    // We create the function that will be executed if AdBlock is detected
-    var adBlockDetected = function() {
-        $('*').hide();
-    }
-    // We create the function that will be executed if AdBlock is NOT detected
-    var adBlockUndetected = function() {
-        $('*').show();
-    }
-    // We observe if the variable "fuckAdBlock" exists
-    if(typeof  FuckAdBlock === 'undefined') {
-        // If it does not exist, it means that AdBlock blocking the script FuckAdBlock
-        // Therefore the function "adBlockDetected" is executed
-        // PS: The function is executed on the "document ready" in order to select the HTML with jQuery
-        $(document).ready(adBlockDetected);
-    } else {
-        // Otherwise, our functions we add to FuckAdBlock for a classic detection
-        fuckAdBlock.on(true, adBlockDetected).on(false, adBlockUndetected);
-    }
-</script>
 </html>
