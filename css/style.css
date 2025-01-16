@@ -121,3 +121,15 @@ footer {
 .terminal-footer a:hover {
   text-decoration: underline;
 }
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
