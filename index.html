@@ -1,80 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>DarkShy - main page</title>
+<head>
     <meta charset="UTF-8">
-    <meta name="title" content="DarkShy - main page">
-    <meta name="description" content="Серая пегаска, среднего роста, примерно 60 см в холке. Имеет серый окрас и черно-красную гриву. Любит заниматься серверным оборудованием.">
-    <meta name="keywords" content="DarkShy, pony, bronyfurry, mlp, cisco, пони, серая пони, черно-красная грива">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="ru">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="black">
-    <meta name="color-scheme" content="dark">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт визитка DarkShy, системного администратора и разработчика.">
+    <meta name="keywords" content="DarkShy, разработка, системное администрирование, веб-дизайн">
+    <meta name="author" content="DarkShy">
+    <title>DarkShy - main page</title>
     <link rel="stylesheet" href="/css/style.css">
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="DarkShy - сайт серой пегаски">
-    <meta property="og:description" content="Серая пегаска, среднего роста, примерно 60 см в холке. Имеет серый окрас и черно-красную гриву. Любит заниматься серверным оборудованием.">
-    <meta property="og:url" content="https://darkshy.ponysocial.ru">
-    <meta property="og:image" content="https://darkshy.ponysocial.ru/img/log.webp">
-    <meta property="og:site_name" content="DarkShy">
-    <meta property="og:locale" content="ru_RU">
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:site" content="@yaoinayakoro4ka">
-    <meta property="twitter:creator" content="@yaoinayakoro4ka">
-    <meta property="twitter:image:src" content="https://darkshy.ponysocial.ru/img/log.webp">
-    <link rel="preload" as="style" href="/css/style.css">
-    <link rel="preconnect" href="https://mc.yandex.ru">
-    <link rel="preconnect" href="https://yandex.ru">
-  </head>
-  <body>
-    <header>
-      <h1 class="header">darkshy@ponysocial :~ <span class="dark">Dark<span class="shy">Shy</span></span></h1>
-      <h2 class="header outro">Просто серая пегаска..<span id="blink">|</span></h2>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <h1>darkshy@bronyfurry:~ <span class="dark">Dark<span class="shy">Shy</span></span></h1>
+        <h2 class="subtitle">Просто серая пегаска..<span id="blink">|</span></h2>
     </header>
+    
     <main>
-      <section>
-        <h2 class="header">Обо мне</h2>
-        <article>
-          <p class="card">Меня зовут DarkShy. В свободное время я занимаюсь изучением программирования на языке NodeJS, а также сайтами. По профессии я системный администратор.</p>
-          <p class="card">На данный момент работаю в школе учителем информатики и математики, а также сетевым администратором. Задумываюсь о получении высшего образования.</p>
-        </article>
-        <figure class="img-fluid centered-image">
-          <img src="/img/log.webp" alt="DarkShy" class="responsive" loading="lazy">
-      </figure>
-      </section>
-      <section>
-        <h2 class="header">Мои проекты</h2>
-        <div>
-          <a href="https://bronyfurry.com/?from=darkshy" target="_blank" class="btn btn-success">BronyFurry fediverse</a>
-          <a href="https://github.com/darkshymw" target="_blank" class="btn btn-dark">Мой Github</a>
-          <a href="https://vk.com/gigisarts" target="_blank" class="btn btn-warning">Паблик с рисунками</a>
-          <a href="/offline.html" target="_blank" class="btn btn-info">Страница offline</a>
-          <a href="https://article.darkshy.bronyfurry.com/" target="_blank" class="btn btn-danger">Блоговый форум</a>
-        </div>
-      </section>
+        <section class="about">
+            <h2>Обо мне</h2>
+            <p>Меня зовут DarkShy. В свободное время я занимаюсь изучением программирования на языке NodeJS, а также сайтами. По профессии я - системный администратор.</p>
+            <p>На данный момент работаю в школе учителем информатики и математики, а также сетевым администратором. Задумываюсь о высшем образовании, хотя ещё не понял, зачем оно мне нужно.</p>
+        </section>
+
+        <section class="image-section">
+            <img src="/img/log.webp" alt="DarkShy" class="centered-image">
+        </section>
+
+        <section class="projects">
+            <h2>Мои проекты</h2>
+            <div class="project-links">
+                <a href="https://bronyfurry.com/?from=darkshy" class="btn" target="_blank">BronyFurry fediverse</a>
+                <a href="https://github.com/darkshymw" class="btn" target="_blank">Мой GitHub</a>
+                <a href="https://vk.com/gigisarts" class="btn" target="_blank">Паблик с рисунками</a>
+                <a href="/offline.html" class="btn" target="_blank">Страница offline</a>
+                <a href="https://article.darkshy.bronyfurry.com/" class="btn" target="_blank">Блоговый форум</a>
+            </div>
+        </section>
     </main>
+    
     <footer>
-      <p>Все права защищены и принадлежат поням.</p>
-      <a href="https://github.com/DarkShyMW/darkshy.bronyfurry.com">Source code at GitHub</a>
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Лицензия Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        <p>Все права защищены и принадлежат поням.</p>
+        <p><a href="https://github.com/DarkShyMW/darkshy.bronyfurry.com" class="github">Source code at GitHub</a></p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License">
+        </a>
     </footer>
-    <script async>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js').then(() => {
-          navigator.serviceWorker.ready.then((worker) => {
-            worker.sync.register('syncdata');
-          });
-        }).catch((err) => console.log(err));
-      }
-    </script>
-    <script async src="https://mc.yandex.ru/metrika/tag.js"></script>
-    <noscript><img src="https://mc.yandex.ru/watch/80486719" style="position:absolute; left:-9999px;" alt=""></noscript>
-  </body>
+</body>
 </html>

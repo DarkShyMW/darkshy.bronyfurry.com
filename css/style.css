@@ -1,93 +1,98 @@
+/* Основные настройки */
 body {
-    background-color: rgb(100, 100, 100);
-    color: chartreuse;
-    font-family: monospace;
-    
+  background-color: #1e1e1e;
+  color: chartreuse;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
 }
 
+/* Заголовки */
 .header {
-    text-align: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  display: inline;
 }
 
 #blink {
-    -webkit-animation: blink 1.5s linear infinite;
-    animation: blink 1.5s linear infinite;
-  }
-  @-webkit-keyframes blink {
-    50% { color: rgb(34, 34, 34); }
-    51% { color: rgba(34, 34, 34, 0); }
-    100% { color: rgba(34, 34, 34, 0); }
-  }
-  @keyframes blink {
-    50% { color: rgb(34, 34, 34); }
-    51% { color: rgba(34, 34, 34, 0); }
-    100% { color: rgba(34, 34, 34, 0); }
-  }
-
-.dark {
-    color:rgb(0, 0, 0);
-}
-.shy {
-    color: red;
+  animation: blink 1.5s infinite;
 }
 
-/* Установка максимального размера для изображения */
-.centered-image {
+/* Обо мне */
+.about, .projects {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #282828;
+  border: 1px solid chartreuse;
+  border-radius: 10px;
+}
+
+/* Картинка */
+.image-section {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 20px auto;
-  max-width: 600px; /* Ограничение ширины */
 }
 
-.centered-image img.responsive {
-  max-width: 100%; /* Для адаптации к экрану */
-  height: auto; /* Сохраняем пропорции */
-  border-radius: 10px; /* Скругление краёв */
-}
-
-/* Упорядочивание текста и карточек */
-div.card {
-  margin: 15px auto;
-  padding: 20px;
-  max-width: 800px; /* Максимальная ширина */
-  background-color: rgba(34, 34, 34, 0.9);
-  border: 1px solid chartreuse;
-  border-radius: 8px; /* Добавляем скругления */
-  color: chartreuse;
-  text-align: justify; /* Упорядочиваем текст */
-}
-
-.card a {
-  display: block; /* Ссылки в столбик */
-  margin: 5px auto;
-  text-align: center;
-}
-
-.responsive {
+.centered-image {
+  max-width: 500px;
   width: 100%;
-    height: auto;
-    max-width: 400px;
-}
-p.outline {
-  --bd-example-padding: 1rem;
-  position: relative;
-  padding: var(--bd-example-padding);
-  margin: 0 -1.5rem;
-  border: solid var(--bs-border-color);
-  border-width: 1px 0;
+  border-radius: 10px;
 }
 
-a.github {
-  outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
-  color:#0ed1f8;
+/* Проекты */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
-.license_S {
-  outline: none;
+.btn {
+  padding: 10px 15px;
+  color: #1e1e1e;
+  background-color: chartreuse;
   text-decoration: none;
-  padding: 2px 1px 0;
-  color:chartreuse;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #8bda8b;
+}
+
+/* Подвал */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #d3d3d3;
+}
+
+footer a {
+  color: chartreuse;
+  text-decoration: none;
+}
+
+/* Анимация */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .about, .projects {
+      padding: 10px;
+  }
+
+  .btn {
+      width: 100%;
+      text-align: center;
+  }
 }
