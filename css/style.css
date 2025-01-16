@@ -1,62 +1,76 @@
 body {
-  background-color: #000;
-  color: #0f0;
-  font-family: "Courier New", Courier, monospace;
   margin: 0;
   padding: 0;
+  background-color: black;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .header {
-  text-align: center;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .terminal {
-  max-width: 800px;
-  margin: 20px auto;
-  border: 2px solid #0f0;
-  border-radius: 5px;
-  background-color: #111;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  width: 80%;
+  background-color: #1e1e1e;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ff00;
+  overflow: hidden;
 }
 
 .terminal-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #222;
-  border-bottom: 2px solid #0f0;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 5px;
 }
 
 .circle {
-  display: inline-block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  margin-right: 5px;
 }
 
 .red {
-  background-color: #ff4d4d;
+  background-color: #ff5f56;
 }
 
 .yellow {
-  background-color: #ffcc00;
+  background-color: #ffbd2e;
 }
 
 .green {
-  background-color: #4dff4d;
+  background-color: #27c93f;
 }
 
 .terminal-title {
-  color: #0f0;
-  font-weight: bold;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .terminal-body {
-  padding: 15px;
+  padding: 20px;
+  font-size: 16px;
+  color: #00ff00;
   text-align: center;
+}
+
+.dark {
+  margin: 0;
+  font-size: 24px;
+  white-space: nowrap;
 }
 
 #blink {
@@ -68,6 +82,7 @@ body {
       opacity: 0;
   }
 }
+
 
 h1.dark {
   margin: 0;
