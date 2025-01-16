@@ -5,8 +5,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
-  color: #00ff00;
+  background-color: #0a0a0a;
+  color: #e1e1e1;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
@@ -57,7 +57,7 @@ header {
 
 .terminal-body {
   padding: 20px;
-  color: #00ff00;
+  color: #e1e1e1;
   font-size: 1.2rem;
 }
 
@@ -90,9 +90,10 @@ main {
 }
 
 .centered-image {
-  max-width: 100%;
+  max-width: calc(100% - 10px); /* Отступы по 5px слева и справа */
   height: auto;
   border-radius: 10px;
+  margin: 20px 5px;
 }
 
 .project-links a {
@@ -118,7 +119,7 @@ footer {
 }
 
 .terminal-footer {
-  color: #00ff00;
+  color: #e1e1e1;
 }
 
 .terminal-footer a {
