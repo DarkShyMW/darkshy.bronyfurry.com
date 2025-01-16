@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Сайт визитка DarkShy, системного администратора и разработчика.">
-    <meta name="keywords" content="DarkShy, разработка, системное администрирование, веб-дизайн">
+    <meta name="description" content="Личный сайт DarkShy, системного администратора и разработчика в стиле терминала Linux.">
+    <meta name="keywords" content="DarkShy, системный администратор, разработчик, терминал, Linux, блог">
     <meta name="author" content="DarkShy">
-    <title>DarkShy - main page</title>
+    <meta property="og:title" content="DarkShy - Личный сайт">
+    <meta property="og:description" content="Личный сайт DarkShy, системного администратора и разработчика. Узнай обо мне больше!">
+    <meta property="og:image" content="/img/darkshy-character.png">
+    <meta property="og:url" content="https://darkshy.bronyfurry.com">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <title>DarkShy - Личный сайт</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 <body>
     <header class="header">
@@ -20,7 +25,8 @@
                 <span class="terminal-title">darkshy@bronyfurry:~</span>
             </div>
             <div class="terminal-body">
-                <h1 class="dark">Просто серая пегаска..<span id="blink">|</span></h1>
+                <h1>darkshy@bronyfurry:~ <span id="blink">|</span></h1>
+                <p>Привет! Добро пожаловать на мой личный сайт в стиле терминала Linux.</p>
             </div>
         </div>
     </header>
@@ -28,22 +34,20 @@
     <main>
         <section class="about">
             <h2>Обо мне</h2>
-            <p>Меня зовут DarkShy. В свободное время я занимаюсь изучением программирования на языке NodeJS, а также сайтами. По профессии я - системный администратор.</p>
-            <p>На данный момент работаю в школе учителем информатики и математики, а также сетевым администратором. Задумываюсь о высшем образовании, хотя ещё не понял, зачем оно мне нужно.</p>
+            <p>Меня зовут DarkShy. Я системный администратор и разработчик, увлекаюсь программированием на NodeJS и созданием веб-сайтов. Когда я не работаю, я разрабатываю свои проекты и изучаю новые технологии.</p>
+            <p>Люблю делиться знаниями, поэтому также веду блог и работаю в сфере образования.</p>
         </section>
 
         <section class="image-section">
-            <img src="/img/log.webp" alt="DarkShy" class="centered-image">
+            <img src="/img/darkshy-character.png" alt="DarkShy" class="centered-image">
         </section>
 
         <section class="projects">
             <h2>Мои проекты</h2>
             <div class="project-links">
-                <a href="https://bronyfurry.com/?from=darkshy" class="btn" target="_blank">BronyFurry fediverse</a>
                 <a href="https://github.com/darkshymw" class="btn" target="_blank">Мой GitHub</a>
-                <a href="https://vk.com/gigisarts" class="btn" target="_blank">Паблик с рисунками</a>
+                <a href="https://bronyfurry.com/?from=darkshy" class="btn" target="_blank">BronyFurry</a>
                 <a href="/offline.html" class="btn" target="_blank">Страница offline</a>
-                <a href="https://article.darkshy.bronyfurry.com/" class="btn" target="_blank">Блоговый форум</a>
             </div>
         </section>
     </main>
@@ -57,5 +61,13 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        // Можно добавить функциональность, например, для бл blinking текста
+        setInterval(() => {
+            const blinkElement = document.getElementById("blink");
+            blinkElement.style.opacity = (blinkElement.style.opacity === "0" ? "1" : "0");
+        }, 1000);
+    </script>
 </body>
 </html>
