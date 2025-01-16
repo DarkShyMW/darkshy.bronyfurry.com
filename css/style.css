@@ -90,10 +90,11 @@ main {
 }
 
 .centered-image {
-  max-width: calc(100% - 10px); /* Отступы по 5px слева и справа */
+  max-width: 60%;  /* Уменьшаем максимальную ширину картинки */
   height: auto;
   border-radius: 10px;
-  margin: 20px 5px;
+  margin: 20px auto;
+  display: block;
 }
 
 .project-links a {
