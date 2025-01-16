@@ -31,15 +31,39 @@ body {
     color: red;
 }
 
-div.imagecenter { 
-  margin: 0 auto;
-  width: 80em;
+/* Установка максимального размера для изображения */
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 600px; /* Ограничение ширины */
 }
-img.center {
-  display: block;
-   margin-left: auto;
-   margin-right: auto;
- }
+
+.centered-image img.responsive {
+  max-width: 100%; /* Для адаптации к экрану */
+  height: auto; /* Сохраняем пропорции */
+  border-radius: 10px; /* Скругление краёв */
+}
+
+/* Упорядочивание текста и карточек */
+div.card {
+  margin: 15px auto;
+  padding: 20px;
+  max-width: 800px; /* Максимальная ширина */
+  background-color: rgba(34, 34, 34, 0.9);
+  border: 1px solid chartreuse;
+  border-radius: 8px; /* Добавляем скругления */
+  color: chartreuse;
+  text-align: justify; /* Упорядочиваем текст */
+}
+
+.card a {
+  display: block; /* Ссылки в столбик */
+  margin: 5px auto;
+  text-align: center;
+}
+
 .responsive {
   width: 100%;
     height: auto;
